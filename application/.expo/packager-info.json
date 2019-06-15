@@ -1,0 +1,10 @@
+{
+  "expoServerNgrokUrl": "https://3n-q9b.anonymous.soa.exp.direct",
+  "packagerNgrokUrl": "https://packager.3n-q9b.anonymous.soa.exp.direct",
+  "ngrokPid": 2812,
+  "packagerPort": 19001,
+  "packagerPid": 13272,
+  "devToolsPort": 19002,
+  "expoServerPort": 19000,
+  "webpackServerPort": null
+}
