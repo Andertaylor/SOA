@@ -11,7 +11,7 @@ import colors from '../../../constants/colors.js';
 export default class DancePage extends Component {
 
   static navigationOptions = {
-    title: 'All-night party'
+    title: 'Sing all night!'
   };
 
   constructor(props) {
@@ -94,11 +94,7 @@ export default class DancePage extends Component {
       >
         <View style={{ flex: 1 }}>
           <View style={styles.containerLog} backgroundColor = {colors.opacityBlack}>
-          <Text style={styles.description}>From 7:00pm to 4:00am we have the best music for you to enjoy at the hotel´s Disco! </Text>
-          <Text style={styles.description}>Monday and Thursday: Reggae</Text>
-          <Text style={styles.description}>Tuesday and Friday: Electronic</Text>
-          <Text style={styles.description}>Wednesday and Saturday: Rock</Text>
-          <Text style={styles.description}>Sunday: Remix</Text>
+          <Text style={styles.description}>Come to the Bar Pura Vida and show your singing talents. There will be prizes and more! From 9:00pm to 2:00am.</Text>
           </View>
           <ActionButton buttonColor={colors.green} title='Like'>
             <ActionButton.Item

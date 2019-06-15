@@ -11,7 +11,7 @@ import colors from '../../../constants/colors.js';
 export default class DancePage extends Component {
 
   static navigationOptions = {
-    title: 'All-night party'
+    title: 'Yoga'
   };
 
   constructor(props) {

@@ -1,17 +1,17 @@
-import React, { Component } from "react";
-import { Alert, View, ImageBackground,Text } from "react-native";
-import ActionButton from "react-native-action-button";
-import Icon from "react-native-vector-icons/Ionicons";
+import React, { Component } from 'react';
+import { Alert, View, ImageBackground,Text } from 'react-native';
+import ActionButton from 'react-native-action-button';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 //------ Import constant files
-import "../../../constants/global.js";
-import styles from "../../../constants/styles.js";
-import colors from "../../../constants/colors.js";
+import '../../../constants/global.js';
+import styles from '../../../constants/styles.js';
+import colors from '../../../constants/colors.js';
 
-export default class SurfPage extends Component {
+export default class JoggingPage extends Component {
 
   static navigationOptions = {
-    title: "Sensor de lluvia"
+    title: 'Surf´s up'
   };
 
   constructor(props) {
@@ -24,13 +24,13 @@ export default class SurfPage extends Component {
   }
 
   //------ Post method called when button pressed, searching by item id.
-  _onSensorOn() {
-    url = "http://" + ipAddress + ":" + port + global.pathSensor;
+  _interested() {
+    url = 'http://' + ipAddress + ':' + port + global.pathSensor;
     const formData = new FormData();
-    formData.append("sensor_State", this.state.sensor_On),
-      console.log("url:" + url);
+    formData.append('sensor_State', this.state.sensor_On),
+      console.log('url:' + url);
     fetch(url, {
-      method: "POST",
+      method: 'POST',
       body: formData
     })
       .then(
@@ -41,27 +41,27 @@ export default class SurfPage extends Component {
               status: result.error,
               wholeResult: result
             });
-            Alert.alert("El sensor de lluvia está encendido");
+            Alert.alert('We hope to see you soon!');
             global.estadoSensor = true;
           } else {
-            Alert.alert("El sensor de lluvia no se pudo encender, inténtelo de nuevo");
+            Alert.alert('Please try again');
             console.log(result);
           }
         }.bind(this)
       )
       .catch(function(error) {
-        console.log("ERROR: " + error);
-        alert("Result:" + error);
+        console.log('ERROR: ' + error);
+        alert('Result:' + error);
       });
   }
 
-  _onSensorOff() {
-    url = "http://" + ipAddress + ":" + port + global.pathSensor;
+  _notInterested() {
+    url = 'http://' + ipAddress + ':' + port + global.pathSensor;
     const formData = new FormData();
-    formData.append("sensor_State", this.state.sensor_Off),
-      console.log("url:" + url);
+    formData.append('sensor_State', this.state.sensor_Off),
+      console.log('url:' + url);
     fetch(url, {
-      method: "POST",
+      method: 'POST',
       body: formData
     })
       .then(
@@ -72,46 +72,45 @@ export default class SurfPage extends Component {
               status: result.error,
               wholeResult: result
             });
-            Alert.alert("El sensor de lluvia está apagado");
+            Alert.alert('ok');
             global.estadoSensor = false;
           } else {
-            Alert.alert("No se pudo apagar el sensor, inténtelo de nuevo");
+            Alert.alert('Please try again');
             console.log(result);
           }
         }.bind(this)
       )
       .catch(function(error) {
-        console.log("ERROR: " + error);
-        alert("Result:" + error);
+        console.log('ERROR: ' + error);
+        alert('Result:' + error);
       });
   }
 
   render() {
     return (
       <ImageBackground
-        source={require("../../../assets/main.jpg")}
+        source={require('../../../assets/surf.jpg')}
         style={styles.container}
       >
         <View style={{ flex: 1 }}>
           <View style={styles.containerLog} backgroundColor = {colors.opacityBlack}>
-          <Text style={styles.description}>Acá podrá activar o desactivar el sensor de lluvia.</Text>
-          <Text style={styles.description}>Para usar los botones de Abrir y Cerrar el tendedero, deberá
-          inhabilitar el sensor de lluvia.</Text>
+          <Text style={styles.description}>Feel the adrenaline in the sea showing your surfing skills. If your in an amateur level don´t worry, learning is posible with our instructors.</Text>
+          <Text style={styles.description}>There are instructors available from 9:00am to 12:00pm and from 2:00pm to 5:00pm the whole week.</Text>
           </View>
-          <ActionButton buttonColor={colors.green} title="Sensor">
+          <ActionButton buttonColor={colors.green} title='Like'>
             <ActionButton.Item
               buttonColor={colors.purple}
-              title="Activar "
-              onPress={() => this._onSensorOn()}
+              title='I´m interested!'
+              onPress={() => this._interested()}
             >
-              <Icon name="md-notifications" style={styles.actionButtonIcon} />
+              <Icon name='md-notifications' style={styles.actionButtonIcon} />
             </ActionButton.Item>
             <ActionButton.Item
               buttonColor={colors.red}
-              title="Desactivar"
-              onPress={() => this._onSensorOff()}
+              title='Maybe later...'
+              onPress={() => this._notInterested()}
             >
-              <Icon name="md-notifications-off" style={styles.actionButtonIcon} />
+              <Icon name='md-notifications-off' style={styles.actionButtonIcon} />
             </ActionButton.Item>
           </ActionButton>
         </View>
