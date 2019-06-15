@@ -75,10 +75,10 @@ export default class GridPage extends Component {
       this.props.navigation.navigate("");
     }
     if (item === 7) {
-      this.props.navigation.navigate("Media");
+      this.props.navigation.navigate("");
     }
     if (item === 8) {
-      this.props.navigation.navigate("Social");
+      this.props.navigation.navigate("");
     }
     if (item === 9) {
       this.props.navigation.navigate("");
