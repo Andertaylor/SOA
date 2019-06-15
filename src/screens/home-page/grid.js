@@ -46,7 +46,7 @@ export default class GridPage extends Component {
       this.props.navigation.navigate("Activities");
     }
     if (item === 2) {
-      this.props.navigation.navigate("Options");
+      this.props.navigation.navigate("Vision");
     }
   }
 

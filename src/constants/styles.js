@@ -78,6 +78,29 @@ const styles = StyleSheet.create({
     color: colors.white,
     textAlign: "center"
   },
+  developmentModeText: {
+    marginBottom: 20,
+    color: "rgba(0,0,0,0.4)",
+    fontSize: 14,
+    lineHeight: 19,
+    textAlign: "center"
+  },
+  getStartedContainer: {
+    alignItems: "center",
+    marginHorizontal: 50,
+    marginBottom: 20
+  },
+
+  getStartedText: {
+    fontSize: 17,
+    color: "rgba(96,100,109, 1)",
+    lineHeight: 24,
+    textAlign: "center"
+  },
+  helpContainer: {
+		marginTop: 15,
+		alignItems: "center"
+  },
   icon: {
     height: 20,
     width: 20
@@ -131,6 +154,21 @@ const styles = StyleSheet.create({
     fontSize: 12,
     flex: 1,
     color: colors.white
+  },
+  view1: {
+    marginTop: 20,
+    width: 250,
+    borderRadius: 3,
+    elevation: 2
+  },
+  view2: {
+    borderTopRightRadius: 3,
+    borderTopLeftRadius: 3,
+    shadowColor: "rgba(0,0,0,1)",
+    shadowOpacity: 0.2,
+    shadowOffset: { width: 4, height: 4 },
+    shadowRadius: 5,
+    overflow: "hidden"
   }
 });
 
