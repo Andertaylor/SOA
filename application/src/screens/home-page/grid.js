@@ -57,43 +57,43 @@ export default class GridPage extends Component {
   //------ Functions when button pressed, searching by item id.
   clickEventListener(item) {
     if (item === 1) {
-      this.props.navigation.navigate("Login");
+      this.props.navigation.navigate("vision");
     }
     if (item === 2) {
-      this.props.navigation.navigate("Vision");
+      this.props.navigation.navigate("Info");
     }
     if (item === 3) {
       this.props.navigation.navigate("Weather");
     }
     if (item === 4) {
-      this.props.navigation.navigate("Activities");
+      this.props.navigation.navigate("");
     }
     if (item === 5) {
-      this.props.navigation.navigate("Vision");
+      this.props.navigation.navigate("");
     }
     if (item === 6) {
-      this.props.navigation.navigate("Weather");
+      this.props.navigation.navigate("");
     }
     if (item === 7) {
-      this.props.navigation.navigate("Activities");
+      this.props.navigation.navigate("Media");
     }
     if (item === 8) {
-      this.props.navigation.navigate("Vision");
+      this.props.navigation.navigate("Social");
     }
     if (item === 9) {
-      this.props.navigation.navigate("Weather");
+      this.props.navigation.navigate("");
     }
     if (item === 10) {
-      this.props.navigation.navigate("Weather");
+      this.props.navigation.navigate("");
     }
     if (item === 11) {
-      this.props.navigation.navigate("Activities");
+      this.props.navigation.navigate("");
     }
     if (item === 12) {
-      this.props.navigation.navigate("Vision");
+      this.props.navigation.navigate("");
     }
     if (item === 13) {
-      this.props.navigation.navigate("Weather");
+      this.props.navigation.navigate("Activities");
     }
   }
 

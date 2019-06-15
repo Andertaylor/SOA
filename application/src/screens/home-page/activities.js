@@ -46,7 +46,7 @@ export default class ActivitiesPage extends Component {
       this.props.navigation.navigate("Dance");
     }
     if (item === 2) {
-      this.props.navigation.navigate("Vision");
+      this.props.navigation.navigate("Jogging");
     }
     if (item === 3) {
         this.props.navigation.navigate("Karaoke");
