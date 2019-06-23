@@ -57,7 +57,7 @@ export default class GridPage extends Component {
   //------ Functions when button pressed, searching by item id.
   clickEventListener(item) {
     if (item === 1) {
-      this.props.navigation.navigate("vision");
+      this.props.navigation.navigate("Login");
     }
     if (item === 2) {
       this.props.navigation.navigate("Info");

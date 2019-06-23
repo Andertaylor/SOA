@@ -69,10 +69,10 @@ export default class SignUp extends React.Component {
               status: result.error,
               wholeResult: result
             });
-            Alert.alert("Success");
+            Alert.alert("Registro exitoso");
             this.props.navigation.navigate("Login");
           } else {
-            Alert.alert("Please try again");
+            Alert.alert("Problema al registrarse, inténtelo de nuevo");
             console.log(result);
           }
         }.bind(this)
@@ -86,7 +86,7 @@ export default class SignUp extends React.Component {
   render() {
     return (
       <View style={styles.containerLog}>
-        <Text style={styles.description}>Fill with your data</Text>
+        <Text style={styles.description}>Ingrese sus datos</Text>
         <View style={styles.flowRight}>
           <TextInput
             style={styles.input}

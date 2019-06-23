@@ -9,14 +9,14 @@ var tentUp = false;
 var sensorState = true;
 
 //Connect to mongo instance
-mongoose.connect('mongodb+srv://prueba:prueba123@clustertendedero-qbev4.mongodb.net/test?retryWrites=true')
+mongoose.connect('mongodb+srv://soa:prueba123@clustertendedero-qbev4.mongodb.net/test?retryWrites=true&w=majority')
 mongoose.connection.once('open', () => {
     console.log('connected to database')
 })
 
 // Create a server with a host and port
 const server = Hapi.server({
-  host: '192.168.43.23',
+  host: '192.168.1.10',
   port: 8080
 });
 

@@ -51,9 +51,9 @@ export default class LoginPage extends React.Component {
       .then(responseJson => {
         console.log(responseJson);
         if (responseJson === 0) {
-          Alert.alert("Wrong user or password");
+          Alert.alert("Usuario o contraseña incorrecta.");
         } else {
-          Alert.alert("Success");
+          Alert.alert("Ingreso exitoso");
           this.props.navigation.navigate("Menu");
         }
       })
@@ -84,7 +84,7 @@ export default class LoginPage extends React.Component {
     ) : null;
     return (
       <View style={styles.containerLog}>
-        <Text style={styles.description}>Welcome!</Text>
+        <Text style={styles.description}>¡Bienvenido!</Text>
         <View style={styles.flowRight}>
           <TextInput
             style={styles.input}
@@ -111,7 +111,7 @@ export default class LoginPage extends React.Component {
           />
           <TouchableOpacity onPress={this._onMessagePressed}>
             <Text style={styles.description2}>
-              Doesn´t have an account? Register clicking here.
+              ¿No tiene una cuenta? Registrese presionando aquí.
             </Text>
           </TouchableOpacity>
         </View>
