@@ -52,6 +52,7 @@ server.route({
     path: '/clothesline/updown',
     handler: function (request, h) {
         const payload = request.payload;
+        console.log("este s mi payload UPDOWN:" + payload.line_Up);  //quitar luego
         lineUp = payload.line_Up;
         return `Recibed in server ${encodeURIComponent(payload.line_Up)}!`;
     }
