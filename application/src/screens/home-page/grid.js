@@ -5,7 +5,8 @@ import {
   TouchableOpacity,
   Image,
   ImageBackground,
-  FlatList
+  FlatList,
+  Linking
 } from "react-native";
 
 //------ Images imports
@@ -31,6 +32,18 @@ export default class GridPage extends Component {
   static navigationOptions = {
     title: "Menu"
   };
+
+  _Booking() {
+    Linking.canOpenURL("https://www.booking.com/searchresults.es.html?aid=311839;label=physis-caribbean-bed-6GEg9GN4WB%2AwadYwSjKxDAS25504072817%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap1t1%3Aneg%3Afi%3Atiaud-146342138710%3Akwd-32758990683%3Alp9070295%3Ali%3Adec%3Adm;sid=bb4dae45f5bccce0f5adf3bca4e6706f;city=-1108716;expand_sb=1;highlighted_hotels=383809;hlrd=no_dates;keep_landing=1;redirected=1;source=hotel&gclid=CjwKCAjwxrzoBRBBEiwAbtX1n8iyfxnm4XmXbqhq8lRFtHkck9F4iHyg109Zv7rG_2cTWYDP1Q7cbBoChWkQAvD_BwE&").then(
+      supported => {
+        if (supported) {
+          Linking.openURL("https://www.booking.com/searchresults.es.html?aid=311839;label=physis-caribbean-bed-6GEg9GN4WB%2AwadYwSjKxDAS25504072817%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap1t1%3Aneg%3Afi%3Atiaud-146342138710%3Akwd-32758990683%3Alp9070295%3Ali%3Adec%3Adm;sid=bb4dae45f5bccce0f5adf3bca4e6706f;city=-1108716;expand_sb=1;highlighted_hotels=383809;hlrd=no_dates;keep_landing=1;redirected=1;source=hotel&gclid=CjwKCAjwxrzoBRBBEiwAbtX1n8iyfxnm4XmXbqhq8lRFtHkck9F4iHyg109Zv7rG_2cTWYDP1Q7cbBoChWkQAvD_BwE&");
+        } else {
+          console.log("Please try again");
+        }
+      }
+    );
+  }
 
   constructor(props) {
     super(props);
@@ -75,10 +88,10 @@ export default class GridPage extends Component {
       this.props.navigation.navigate("");
     }
     if (item === 7) {
-      this.props.navigation.navigate("");
+      this._Booking();
     }
     if (item === 8) {
-      this.props.navigation.navigate("");
+      this.props.navigation.navigate("Media");
     }
     if (item === 9) {
       this.props.navigation.navigate("");

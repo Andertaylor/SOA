@@ -16,6 +16,8 @@ import SoccerPage from './src/screens/home-page/description/soccer'
 import SurfPage from './src/screens/home-page/description/surf'
 import ActivitiesPage from './src/screens/home-page/activities'
 import vision from './src/screens/vision'
+import media from './src/screens/home-page/views/media'
+
 
 const App = createStackNavigator({
   Menu: {screen: GridPage},
@@ -30,6 +32,7 @@ const App = createStackNavigator({
   Yoga: {screen: YogaPage},
   Activities: {screen: ActivitiesPage},
   Vision: {screen: vision},
+  Media: {screen: media},
   //--- Weather: {screen: Weather}
 })
 

@@ -169,7 +169,8 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 4, height: 4 },
     shadowRadius: 5,
     overflow: "hidden"
-  }
+  },
+  
 });
 
 export default styles;
